@@ -1,5 +1,5 @@
-#ifndef PixhawkArduinoMAVLink_h
-#define PixhawkArduinoMAVLink_h
+#ifndef BetaflightArduinoMavlink_h
+#define BetaflightArduinoMavlink_h
 
 #include "PixhawkArduinoMAVLink-master/src/common/mavlink.h"
 #include "PixhawkArduinoMAVLink-master/src/checksum.h"
@@ -8,10 +8,10 @@
 #include <Arduino.h>
 #include <HardwareSerial.h>
 
-class PixhawkArduinoMAVLink
+class BetaflightArduinoMavlink
 {
   public:
-    PixhawkArduinoMAVLink(HardwareSerial &hs);
+    BetaflightArduinoMavlink(HardwareSerial &hs);
     bool begin();
     void ReadAcceleration(float *xacc, float *yacc, float *zacc);
     void Stream();

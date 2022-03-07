@@ -4,9 +4,9 @@
   Using MAVLink C headers files generated from the ardupilotmega.xml with the help of mavgenerator.
 */
 
-#include "mavlink.h"
+#include "BetaflightArduinoMavlink.h"
 
-PixhawkArduinoMAVLink::PixhawkArduinoMAVLink(HardwareSerial &hs){
+BetaflightArduinoMavlink::BetaflightArduinoMavlink(HardwareSerial &hs){
   _MAVSerial = &hs;
   MILLIG_TO_MS2 = 9.80665 / 1000.0;
   system_id = 1; // Your i.e. Arduino sysid
@@ -15,7 +15,7 @@ PixhawkArduinoMAVLink::PixhawkArduinoMAVLink(HardwareSerial &hs){
   autopilot =  MAV_AUTOPILOT_INVALID;
 }
 
-bool PixhawkArduinoMAVLink::begin(){
+bool BetaflightArduinoMavlink::begin(){
   _MAVSerial->begin(57600);
   if(_MAVSerial->available()<=0){
     return 0;
@@ -27,7 +27,7 @@ bool PixhawkArduinoMAVLink::begin(){
 // At first we will send some HeartBeats to Pixhawk to check whether it's available or not??
 // After that we will check for whether we are recieving HeartBeats back from Pixhawk if Yes,
 // We will note down its sysid and compid to send it a req to Stream Data.
-void PixhawkArduinoMAVLink::Stream(){
+void BetaflightArduinoMavlink::Stream(){
   delay(2000);
   int flag=1;
   Serial.println("Sending Heartbeats...");
@@ -78,7 +78,7 @@ void PixhawkArduinoMAVLink::Stream(){
 
 }
 
-void PixhawkArduinoMAVLink::ReadAcceleration(float *xacc, float *yacc, float *zacc){
+void BetaflightArduinoMavlink::ReadAcceleration(float *xacc, float *yacc, float *zacc){
   int flagI = 1;
   int flagA = 1;
   float xa, ya, za, q0, q1, q2, q3;

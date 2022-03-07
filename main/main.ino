@@ -1,11 +1,11 @@
 // Example Code to read acceleration data from pixhawk
 // Check HardwareSerial connection for your Arduino board and connect them according to the connection shown in guide.md
 
-#include "mavlink.h"
+#include "BetaflightArduinoMavlink.h"
 #include <HardwareSerial.h>
 
 HardwareSerial &hs = Serial2;
-PixhawkArduinoMAVLink mav(hs);
+BetaflightArduinoMavlink mav(hs);
 
 void setup(){
   Serial.begin(57600);
