@@ -1,10 +1,10 @@
 #ifndef BetaflightArduinoMavlink_h
 #define BetaflightArduinoMavlink_h
 
-#include "PixhawkArduinoMAVLink-master/src/common/mavlink.h"
-#include "PixhawkArduinoMAVLink-master/src/checksum.h"
-#include "PixhawkArduinoMAVLink-master/src/mavlink_types.h"
-#include "PixhawkArduinoMAVLink-master/src/protocol.h"
+#include "MavLinkHelpHeaders/src/common/mavlink.h"
+#include "MavLinkHelpHeaders/src/checksum.h"
+#include "MavLinkHelpHeaders/src/mavlink_types.h"
+#include "MavLinkHelpHeaders/src/protocol.h"
 #include <Arduino.h>
 #include <HardwareSerial.h>
 
