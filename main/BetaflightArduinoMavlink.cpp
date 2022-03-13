@@ -150,3 +150,4 @@ void BetaflightArduinoMavlink::ReadAcceleration(float *xacc, float *yacc, float 
 
   return;
 }
+
